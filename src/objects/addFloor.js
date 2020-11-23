@@ -1,18 +1,3 @@
-function addFloor() {
-
-    var floorGeometry = new THREE.PlaneGeometry(200,200);
-    var floorMaterial = new THREE.MeshStandardMaterial({
-        color: 0xFFFFFF,
-        roughness: 0.4,
-        metalness: 0.0
-    });
-    var floorTexture = new THREE.TextureLoader().load('src/images/floor.png');
-    floorTexture.repeat.set(4, 4);
-    floorTexture.wrapS = THREE.RepeatWrapping;
-    floorTexture.wrapT = THREE.RepeatWrapping;
-    floorMaterial.map = floorTexture;
-    var floor = new THREE.Mesh(floorGeometry,floorMaterial);
-    floor.rotation.x = -90 * DEG_TO_RAD;
-    floor.receiveShadow = true;
-    scene.add(floor);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:deac9e3ae6deca6415446cd30da3cbf4f2af61a5faf22e370d41c5262e388442
+size 621

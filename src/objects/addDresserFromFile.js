@@ -1,27 +1,3 @@
-function addDresserFromFile() {
-
-    dresser = new THREE.Group();
-
-    var fbxloader = new THREE.FBXLoader();
-
-
-    // https://free3d.com/3d-model/dresser-74200.html
-    fbxloader.load('src/models/Dresser.fbx', function(object) {
-        dresser.add(object);
-
-        object.traverse(function(child) {
-            if (child.isMesh) {
-                child.castShadow = true;
-                child.receiveShadow = true;
-            }
-        });
-    });
-
-    scene.add(dresser);
-
-    dresser.rotation.y = -90 * DEG_TO_RAD;
-    dresser.position.set(0,30.1,0);
-    
-
-    physics.addBox(dresser, 62, 60.2, 120.2, 0);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:07da40225153523b7d790d02c8b49db96a21b5eb265009f1d0ce3c1a9e65bf9c
+size 615
